@@ -67,10 +67,9 @@ public class Reservas {
 
 		if (reserva == null) {
 			throw new NullPointerException("ERROR: No se puede realizar una reserva nula.");
-
+			
 		} else if (buscar(reserva) == null) {
 			coleccionReservas.add(new Reserva(reserva));
-
 		} else {
 			throw new OperationNotSupportedException("ERROR: La reserva ya existe.");
 		}

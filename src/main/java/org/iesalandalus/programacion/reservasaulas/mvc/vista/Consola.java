@@ -7,7 +7,7 @@ import java.time.format.DateTimeParseException;
 import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Aula;
 import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Profesor;
 import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Tramo;
-
+import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 
@@ -15,7 +15,7 @@ public class Consola {
 	static Opcion[] opciones = Opcion.values();
 	static Tramo[] tramos = Tramo.values();
 
-	public Consola() {
+	private Consola() {
 
 	}
 
