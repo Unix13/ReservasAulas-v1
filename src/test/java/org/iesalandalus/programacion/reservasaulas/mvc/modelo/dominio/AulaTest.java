@@ -8,7 +8,7 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 public class AulaTest {
-	/*
+
 	private static final String ERROR_EXCEPCION = "Debería haber saltado la excepción.";
 	private static final String ERROR_NO_EXCEPCION = "No debería haber saltado la excepción.";
 	private static final String NOMBRE = "Salón de actos";
@@ -23,7 +23,7 @@ public class AulaTest {
 			fail(ERROR_NO_EXCEPCION);
 		}
 	}
-	
+
 	@Test
 	public void constructorUnParametroNoValidoTest() {
 		Aula aula = null;
@@ -43,7 +43,7 @@ public class AulaTest {
 			assertNull(aula);
 		}
 	}
-	
+
 	@Test
 	public void constructorCopiaValidoTest() {
 		Aula aula = new Aula(NOMBRE);
@@ -55,7 +55,7 @@ public class AulaTest {
 			fail(ERROR_NO_EXCEPCION);
 		}
 	}
-	
+
 	@Test
 	public void constructorCopiaNoValidoTest() {
 		Aula aula = null;
@@ -68,13 +68,13 @@ public class AulaTest {
 			assertNull(aula);
 		}
 	}
-	
+
 	@Test
 	public void getTest() {
 		Aula aula = new Aula(NOMBRE);
 		assertEquals(NOMBRE, aula.getNombre());
 	}
-	
+
 	@Test
 	public void hasCodeTest() {
 		Aula aula = new Aula(NOMBRE);
@@ -84,7 +84,7 @@ public class AulaTest {
 		assertEquals(aula.hashCode(), aula1.hashCode());
 		assertNotEquals(aula.hashCode(), aula2.hashCode());
 	}
-	
+
 	@Test
 	public void equalTest() {
 		Aula aula = new Aula(NOMBRE);
@@ -96,11 +96,11 @@ public class AulaTest {
 		assertEquals(aula, aula1);
 		assertNotEquals(aula, aula2);
 	}
-	
+
 	@Test
 	public void toStringTest() {
 		Aula aula = new Aula(NOMBRE);
 		assertEquals("nombre Aula=Salón de actos", aula.toString());
 	}
-*/
+
 }
