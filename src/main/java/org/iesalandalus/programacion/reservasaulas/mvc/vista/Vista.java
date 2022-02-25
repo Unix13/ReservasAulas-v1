@@ -70,7 +70,7 @@ public class Vista {
 			if (profesorBuscar == null) {
 				System.out.println("El profesor introducido no existe.");
 			} else {
-				System.out.println("El profesor introducido existe.");
+				System.out.println("El profesor introducido ya existe.");
 			}
 
 		} catch (NullPointerException | IllegalArgumentException e) {
