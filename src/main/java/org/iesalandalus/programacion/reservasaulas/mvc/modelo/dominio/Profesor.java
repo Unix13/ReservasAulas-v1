@@ -113,8 +113,7 @@ public class Profesor {
 		if (getClass() != obj.getClass())
 			return false;
 		Profesor other = (Profesor) obj;
-		return Objects.equals(correo, other.correo) && Objects.equals(nombre, other.nombre)
-				&& Objects.equals(telefono, other.telefono);
+		return Objects.equals(nombre, other.nombre);
 	}
 
 	@Override

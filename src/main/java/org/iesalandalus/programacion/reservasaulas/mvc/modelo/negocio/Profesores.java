@@ -15,7 +15,7 @@ import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Profesor;
  */
 public class Profesores {
 
-	List<Profesor> coleccionProfesores;
+	private List<Profesor> coleccionProfesores;
 
 	public Profesores() {
 

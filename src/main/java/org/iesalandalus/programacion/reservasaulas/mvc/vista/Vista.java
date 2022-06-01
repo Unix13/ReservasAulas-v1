@@ -13,7 +13,7 @@ import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Tramo;
 
 public class Vista {
 
-	Controlador controlador;
+	private Controlador controlador;
 	private final static String ERROR = "No existen reservas para el parámetro proporcionado";
 	private final static String NOMBRE_VALIDO = "Peter";
 	private final static String CORREO_VALIDO = "peter1984@yahoo.com";
@@ -24,6 +24,7 @@ public class Vista {
 	}
 
 	public void setControlador(Controlador controlador) {
+
 		this.controlador = controlador;
 	}
 
@@ -85,11 +86,10 @@ public class Vista {
 		try {
 			controlador.borrarProfesor(Consola.leerProfesor());
 			System.out.println("El profesor se ha borrado correctamente.");
-			} catch (NullPointerException | IllegalArgumentException | OperationNotSupportedException e) {
-				System.out.println(e.getMessage());
-			}
+		} catch (NullPointerException | IllegalArgumentException | OperationNotSupportedException e) {
+			System.out.println(e.getMessage());
 		}
-	
+	}
 
 	public void listarProfesores() {
 

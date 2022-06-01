@@ -12,8 +12,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 public class Consola {
 
 	private final static DateTimeFormatter FORMATO_DIA = DateTimeFormatter.ofPattern("dd/M/yyyy");
-	static Opcion[] opciones = Opcion.values();
-	static Tramo[] tramos = Tramo.values();
+
 
 	private Consola() {
 

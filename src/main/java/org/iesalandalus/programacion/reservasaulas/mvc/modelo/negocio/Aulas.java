@@ -17,7 +17,7 @@ import org.iesalandalus.programacion.reservasaulas.mvc.modelo.dominio.Aula;
  */
 public class Aulas {
 
-	List<Aula> coleccionAulas;
+	private List<Aula> coleccionAulas;
 
 	public Aulas() {
 
@@ -65,8 +65,7 @@ public class Aulas {
 
 		if (aula == null) {
 			throw new NullPointerException("ERROR: No se puede insertar un aula nula.");
-		}
-		else if (buscar(aula) == null) {
+		} else if (buscar(aula) == null) {
 			coleccionAulas.add(new Aula(aula));
 		} else {
 			throw new OperationNotSupportedException("ERROR: Ya existe un aula con ese nombre.");
@@ -95,14 +94,12 @@ public class Aulas {
 
 		if (aula == null) {
 			throw new NullPointerException("ERROR: No se puede borrar un aula nula.");
-		}
-		else if (buscar(aula) == null) {
+		} else if (buscar(aula) == null) {
 			throw new OperationNotSupportedException("ERROR: No existe ningún aula con ese nombre.");
-		}
-		else {
+		} else {
 			coleccionAulas.remove(coleccionAulas.indexOf(aula));
 		}
-		
+
 	}
 
 	public List<String> representar() {

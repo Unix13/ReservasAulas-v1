@@ -13,19 +13,19 @@ import org.iesalandalus.programacion.reservasaulas.mvc.modelo.negocio.Reservas;
 
 public class Modelo {
 
-	Profesores profesores;
-	Aulas aulas;
-	Reservas reservas;
+	private Profesores profesores;
+	private Aulas aulas;
+	private Reservas reservas;
 
 	public Modelo() {
-		
+
 		profesores = new Profesores();
 		aulas = new Aulas();
 		reservas = new Reservas();
 	}
 
 	public List<Aula> getAulas() {
-		
+
 		return aulas.getAulas();
 	}
 
@@ -54,7 +54,7 @@ public class Modelo {
 	public Aula buscarAula(Aula aula) {
 
 		Aula aulaEncontrada = aulas.buscar(aula);
-		
+
 		if (aulaEncontrada == null) {
 			return null;
 		} else {
@@ -63,38 +63,38 @@ public class Modelo {
 	}
 
 	public void insertarAula(Aula aula) throws OperationNotSupportedException {
-		
+
 		aulas.insertar(aula);
 	}
 
 	public void borrarAula(Aula aula) throws OperationNotSupportedException {
-		
+
 		aulas.borrar(aula);
 	}
 
 	public List<Profesor> getProfesores() {
-		
+
 		return profesores.getProfesores();
 	}
-	
+
 	public int getNumProfesores() {
-		
+
 		return profesores.getNumProfesores();
 	}
 
 	public List<String> representarProfesores() {
-		
-		List<String> listaProfesores=profesores.representar();
-		boolean vacio=true;
-		Iterator<String> iterador=listaProfesores.iterator();
+
+		List<String> listaProfesores = profesores.representar();
+		boolean vacio = true;
+		Iterator<String> iterador = listaProfesores.iterator();
 		while (iterador.hasNext()) {
-			String auxiliar=iterador.next();
-			if(auxiliar!=null) {
-				vacio=false;
-			}		
+			String auxiliar = iterador.next();
+			if (auxiliar != null) {
+				vacio = false;
+			}
 		}
-		
-		if(vacio==true) {
+
+		if (vacio == true) {
 			return null;
 		}
 		return listaProfesores;
@@ -115,37 +115,36 @@ public class Modelo {
 	}
 
 	public void borrarProfesor(Profesor profesor) throws OperationNotSupportedException {
-		
+
 		profesores.borrar(profesor);
 	}
 
 	public List<Reserva> getReservas() {
-		
+
 		return reservas.getReservas();
 	}
-	
+
 	public int getNumReservas() {
-		
+
 		return reservas.getNumReservas();
 	}
 
-	
-		public List<String> representarReservas() {
-			List<String> listaReservas=reservas.representar();
-			boolean vacio=true;
-			Iterator<String> iterador=listaReservas.iterator();
-			while (iterador.hasNext()) {
-				String auxiliar=iterador.next();
-				if(auxiliar!=null) {
-					vacio=false;
-				}		
+	public List<String> representarReservas() {
+		List<String> listaReservas = reservas.representar();
+		boolean vacio = true;
+		Iterator<String> iterador = listaReservas.iterator();
+		while (iterador.hasNext()) {
+			String auxiliar = iterador.next();
+			if (auxiliar != null) {
+				vacio = false;
 			}
-			
-			if(vacio==true) {
-				return null;
-			}
-			return listaReservas;
 		}
+
+		if (vacio == true) {
+			return null;
+		}
+		return listaReservas;
+	}
 
 	public Reserva buscarReserva(Reserva reserva) {
 
@@ -157,73 +156,71 @@ public class Modelo {
 	}
 
 	public void realizarReserva(Reserva reserva) throws OperationNotSupportedException {
-		
-	
+
 		reservas.insertar(reserva);
 	}
 
 	public void anularReserva(Reserva reserva) throws OperationNotSupportedException {
-		
+
 		reservas.borrar(reserva);
 	}
 
-	public List<Reserva> getReservasAula(Aula aula){
-		
-		List<Reserva> reservasAula=reservas.getReservasAula(aula);
-		boolean vacio=true;
-		Iterator<Reserva> iterador=reservasAula.iterator();
+	public List<Reserva> getReservasAula(Aula aula) {
+
+		List<Reserva> reservasAula = reservas.getReservasAula(aula);
+		boolean vacio = true;
+		Iterator<Reserva> iterador = reservasAula.iterator();
 		while (iterador.hasNext()) {
-			Reserva auxiliar=iterador.next();
-			if(auxiliar!=null) {
-				vacio=false;
-			}		
+			Reserva auxiliar = iterador.next();
+			if (auxiliar != null) {
+				vacio = false;
+			}
 		}
-		
-		if(vacio==true) {
+
+		if (vacio == true) {
 			return null;
 		}
 		return reservasAula;
 	}
-	
 
-	public List<Reserva> getReservasProfesor(Profesor profesor){
-		
-		List<Reserva> reservasProfesor=reservas.getReservasProfesor(profesor);
-		boolean vacio=true;
-		Iterator<Reserva> iterador=reservasProfesor.iterator();
+	public List<Reserva> getReservasProfesor(Profesor profesor) {
+
+		List<Reserva> reservasProfesor = reservas.getReservasProfesor(profesor);
+		boolean vacio = true;
+		Iterator<Reserva> iterador = reservasProfesor.iterator();
 		while (iterador.hasNext()) {
-			Reserva auxiliar=iterador.next();
-			if(auxiliar!=null) {
-				vacio=false;
-			}		
+			Reserva auxiliar = iterador.next();
+			if (auxiliar != null) {
+				vacio = false;
+			}
 		}
-		
-		if(vacio==true) {
+
+		if (vacio == true) {
 			return null;
 		}
 		return reservasProfesor;
 	}
 
 	public List<Reserva> getReservasPermanencia(Permanencia permanencia) {
-		
-		List<Reserva> reservasPermanencia=reservas.getReservasPermanencia(permanencia);
-		boolean vacio=true;
-		Iterator<Reserva> iterador=reservasPermanencia.iterator();
+
+		List<Reserva> reservasPermanencia = reservas.getReservasPermanencia(permanencia);
+		boolean vacio = true;
+		Iterator<Reserva> iterador = reservasPermanencia.iterator();
 		while (iterador.hasNext()) {
-			Reserva auxiliar=iterador.next();
-			if(auxiliar!=null) {
-				vacio=false;
-			}		
+			Reserva auxiliar = iterador.next();
+			if (auxiliar != null) {
+				vacio = false;
+			}
 		}
-		
-		if(vacio==true) {
+
+		if (vacio == true) {
 			return null;
 		}
 		return reservasPermanencia;
 	}
-	
+
 	public boolean consultarDisponibilidad(Aula aula, Permanencia permanencia) {
-		
+
 		return reservas.consultarDisponibilidad(aula, permanencia);
 	}
 }

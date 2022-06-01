@@ -15,7 +15,7 @@ public class Permanencia {
 
 	private Tramo tramo;
 	private LocalDate dia;
-	private final static DateTimeFormatter FORMATO_DIA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	protected static final DateTimeFormatter FORMATO_DIA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	public LocalDate getDia() {
 		return dia;
@@ -39,13 +39,13 @@ public class Permanencia {
 		this.tramo = tramo;
 	}
 
-//	Constructor con parámetros
+
 	public Permanencia(LocalDate dia, Tramo tramo) {
 		setDia(dia);
 		setTramo(tramo);
 	}
 
-//	Constructor copia
+
 	public Permanencia(Permanencia p) {
 		if (p == null) {
 			throw new NullPointerException("ERROR: No se puede copiar una permanencia nula.");
@@ -73,7 +73,6 @@ public class Permanencia {
 
 	@Override
 	public String toString() {
-
-		return "dia=" + dia.format(FORMATO_DIA) + ", tramo=" + tramo;
+		return "dia=" + getDia().format(FORMATO_DIA) + ", tramo=" + getTramo();
 	}
 }
